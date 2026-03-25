@@ -12,7 +12,7 @@ export function SiteFooter({ siteData }) {
             <p className="text-base font-black text-mechanicBlack sm:text-lg">{siteData.businessName}</p>
             <p className="mt-1">{siteData.footerTagline}</p>
             <p className="mt-2 font-semibold text-zinc-500">
-              No shop. No waiting. Call {siteData.contact.phone} or email {siteData.contact.email}
+              No shop. No waiting. Phone {siteData.contact.phone} or email {siteData.contact.email}
             </p>
           </div>
         </div>
@@ -25,12 +25,6 @@ export function SiteFooter({ siteData }) {
           </a>
           <a href="#contact" className="hover:text-mechanicCopper">
             Contact
-          </a>
-          <a
-            href={`tel:${siteData.contact.phone}`}
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-mechanicOrange px-5 py-2 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-          >
-            Call Now
           </a>
         </div>
       </div>

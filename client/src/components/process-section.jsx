@@ -23,16 +23,10 @@ export function ProcessSection({ processSteps }) {
           ))}
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 border-t border-white/10 pt-6">
           <p className="max-w-2xl text-sm font-semibold leading-6 text-white/75">
             Need roadside help or worried you will not make it to a shop? Call first for the fastest next step.
           </p>
-          <a
-            href="#contact"
-            className="inline-flex min-h-12 items-center justify-center rounded-full bg-mechanicOrange px-6 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-          >
-            Get Help Now
-          </a>
         </div>
       </div>
     </section>

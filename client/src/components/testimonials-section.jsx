@@ -33,15 +33,6 @@ export function TestimonialsSection({ testimonials }) {
           </article>
         ))}
       </div>
-
-      <div className="mt-8 flex justify-center">
-        <a
-          href="#contact"
-          className="inline-flex min-h-12 items-center justify-center rounded-full bg-mechanicOrange px-6 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-        >
-          Request Service
-        </a>
-      </div>
     </section>
   )
 }

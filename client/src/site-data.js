@@ -5,7 +5,7 @@ export const siteData = {
   emergencyBadge: 'Same-day and roadside help available when scheduling allows',
   heroEyebrow: "Serving St. John's, Mount Pearl, Paradise, and nearby areas",
   heroTitle: 'Car trouble? We come to you.',
-  heroCardTitle: 'Call now for the fastest response.',
+  heroCardTitle: 'Reach out for the fastest response.',
   heroCardText:
     'Tell us the issue, your location, and how urgent it is. We will confirm availability, pricing expectations, and the next step before the visit.',
   heroDescription:
@@ -17,7 +17,7 @@ export const siteData = {
     email: 'drivewaymechanicsnl@gmail.com',
   },
   trustHighlights: [
-    'Call now for fastest service',
+    'Fast response for urgent service',
     'Clear pricing before work starts',
     'Diagnostics, brakes, no-starts, and roadside help',
   ],

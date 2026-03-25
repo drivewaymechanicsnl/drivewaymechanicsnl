@@ -1,4 +1,4 @@
-export function HeroSection({ siteData, phoneHref }) {
+export function HeroSection({ siteData }) {
   return (
     <section id="home" className="relative overflow-hidden bg-mechanicBlack text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(242,106,33,0.3),_transparent_28%),linear-gradient(135deg,_#1a1512_0%,_#332017_42%,_#8f4b22_100%)]" />
@@ -22,21 +22,6 @@ export function HeroSection({ siteData, phoneHref }) {
                 <p className="text-sm font-semibold leading-5 text-white/80 sm:leading-6">{item}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a
-              href={`tel:${phoneHref}`}
-              className="inline-flex min-h-14 items-center justify-center rounded-full bg-mechanicOrange px-7 py-4 text-base font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-            >
-              Call {siteData.contact.phone}
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/20 bg-mechanicPanel px-7 py-4 text-base font-extrabold text-mechanicBlack transition hover:border-mechanicBronze hover:text-mechanicCopper"
-            >
-              Get Help Now
-            </a>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-white/70">
@@ -69,12 +54,12 @@ export function HeroSection({ siteData, phoneHref }) {
             <p className="mt-2 text-xl font-black sm:text-2xl">{siteData.heroCardTitle}</p>
             <p className="mt-2 text-sm leading-6 text-zinc-600">{siteData.heroCardText}</p>
             <div className="mt-5 grid gap-3">
-              <a
-                href={`tel:${phoneHref}`}
-                className="inline-flex min-h-12 items-center justify-center rounded-full bg-mechanicOrange px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-              >
-                Call {siteData.contact.phone}
-              </a>
+              <div className="rounded-2xl border border-mechanicSteel bg-white p-4">
+                <p className="text-sm font-black text-mechanicBlack">Phone: {siteData.contact.phone}</p>
+                <p className="mt-1 text-sm leading-6 text-zinc-600">
+                  Use the contact section below for requests and urgent service questions.
+                </p>
+              </div>
               <div className="rounded-2xl border border-mechanicSteel bg-white p-4">
                 <p className="text-sm font-black text-mechanicBlack">Roadside and no-start calls are prioritized when possible</p>
                 <p className="mt-1 text-sm leading-6 text-zinc-600">

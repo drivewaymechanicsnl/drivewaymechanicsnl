@@ -1,6 +1,6 @@
 import { SectionHeading } from './section-heading'
 
-export function ServicesSection({ serviceGroups, whyChooseUs, phoneHref }) {
+export function ServicesSection({ serviceGroups, whyChooseUs }) {
   const featuredServices = [
     { label: 'Diagnostics', detail: 'Warning lights, testing, and clear next steps' },
     { label: 'Roadside No-Start', detail: 'Fast help for batteries, starters, and urgent no-start calls' },
@@ -19,26 +19,12 @@ export function ServicesSection({ serviceGroups, whyChooseUs, phoneHref }) {
         <article className="overflow-hidden rounded-[2rem] border border-mechanicSteel bg-mechanicPanel shadow-card">
           <div className="border-b border-white/10 bg-[linear-gradient(135deg,_#12100f_0%,_#241812_52%,_#7c3f1d_100%)] px-5 py-5 text-white sm:px-8 sm:py-6">
             <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-mechanicBronze">Menu card</p>
-            <div className="mt-3 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mt-3">
               <div>
                 <h3 className="text-2xl font-black tracking-tight sm:text-3xl">Service Menu & Pricing</h3>
                 <p className="mt-2 max-w-2xl text-sm leading-7 text-white/75">
                   Review the most common on-site services in one place. These are labor-only starter prices designed for quick scanning on mobile.
                 </p>
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={`tel:${phoneHref}`}
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-mechanicOrange px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-                >
-                  Call For Quote
-                </a>
-                <a
-                  href="#contact"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-mechanicPanel px-5 py-3 text-sm font-extrabold text-mechanicBlack"
-                >
-                  Get Help Now
-                </a>
               </div>
             </div>
           </div>
@@ -91,20 +77,6 @@ export function ServicesSection({ serviceGroups, whyChooseUs, phoneHref }) {
               <p className="text-sm font-semibold leading-6 text-zinc-600">
                 Prices are labor-only starting points. Parts are extra when needed. Final quote depends on vehicle make, model, and the exact repair required.
               </p>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={`tel:${phoneHref}`}
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-mechanicOrange px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-                >
-                  Call For Quote
-                </a>
-                <a
-                  href="#contact"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-mechanicCopper/30 bg-white px-5 py-3 text-sm font-extrabold text-mechanicBlack transition hover:border-mechanicCopper hover:text-mechanicCopper"
-                >
-                  Send Service Request
-                </a>
-              </div>
             </div>
           </div>
         </article>
@@ -131,20 +103,6 @@ export function ServicesSection({ serviceGroups, whyChooseUs, phoneHref }) {
                   <p className="mt-2 text-sm leading-6 text-zinc-600">{reason.text}</p>
                 </div>
               ))}
-            </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={`tel:${phoneHref}`}
-                className="inline-flex min-h-12 items-center justify-center rounded-full bg-mechanicOrange px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-              >
-                Call Now
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex min-h-12 items-center justify-center rounded-full border border-mechanicCopper/30 bg-white px-5 py-3 text-sm font-extrabold text-mechanicBlack transition hover:border-mechanicCopper hover:text-mechanicCopper"
-              >
-                Request Service
-              </a>
             </div>
           </div>
         </div>
