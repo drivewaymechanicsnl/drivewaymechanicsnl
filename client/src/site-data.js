@@ -22,7 +22,7 @@ export const siteData = {
     'Diagnostics, brakes, no-starts, and roadside help',
   ],
   about:
-    'We fix your car at home, at work, or on the roadside so you can skip the tow, skip the shop wait, and get a clear plan fast.',
+    "Driveway Mechanics NL was built around a simple idea: people in Newfoundland should be able to get honest, skilled auto repair help without the stress of towing their vehicle to a shop. Our team includes experienced mechanics with years in the trade, including certified professionals who have spent decades helping drivers diagnose problems, make safe repairs, and get back on the road with confidence. We bring that same practical, community-first service to your driveway, workplace, or roadside location with clear communication, straightforward recommendations, and help you can trust.",
   footerTagline: "Mobile auto repair across St. John's and surrounding areas.",
   serviceAreaLocations: [
     "St. John's",

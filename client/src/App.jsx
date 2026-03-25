@@ -29,7 +29,7 @@ function App() {
     issue: '',
   })
 
-  const formEndpoint = import.meta.env.VITE_FORM_ENDPOINT || '/api/inquiry'
+  const formEndpoint = import.meta.env.VITE_FORM_ENDPOINT?.trim() || ''
   const phoneHref = siteData.contact.phone || '7096319056'
   const emailHref = siteData.contact.email || 'drivewaymechanicsnl@gmail.com'
   const navLinks = useMemo(
@@ -47,7 +47,33 @@ function App() {
     event.preventDefault()
     setInquiryStatus({ loading: true, message: '', isError: false })
 
+    const serviceLabel = formValues.service || 'Not specified'
+    const emailSubject = `Service request from ${formValues.name}`
+    const emailBody = [
+      `Name: ${formValues.name}`,
+      `Phone: ${formValues.phone}`,
+      `Location: ${formValues.location}`,
+      `Service needed: ${serviceLabel}`,
+      '',
+      'Issue description:',
+      formValues.issue,
+    ].join('\n')
+
+    const openMailtoDraft = () => {
+      window.location.href = `mailto:${emailHref}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
+    }
+
     try {
+      if (!formEndpoint) {
+        openMailtoDraft()
+        setInquiryStatus({
+          loading: false,
+          message: 'Your email app has been opened with your request details filled in.',
+          isError: false,
+        })
+        return
+      }
+
       const response = await fetch(formEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -55,7 +81,8 @@ function App() {
       })
 
       if (!response.ok) {
-        throw new Error('Unable to send your request right now. Please call instead.')
+        openMailtoDraft()
+        throw new Error('The form service is unavailable right now. Your email app has been opened with the request details instead.')
       }
 
       setInquiryStatus({

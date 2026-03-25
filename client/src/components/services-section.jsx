@@ -1,18 +1,12 @@
 import { SectionHeading } from './section-heading'
 
 export function ServicesSection({ serviceGroups, whyChooseUs }) {
-  const featuredServices = [
-    { label: 'Diagnostics', detail: 'Warning lights, testing, and clear next steps' },
-    { label: 'Roadside No-Start', detail: 'Fast help for batteries, starters, and urgent no-start calls' },
-    { label: 'Brake Service', detail: 'Inspections and brake pad replacement done on-site when possible' },
-  ]
-
   return (
     <section id="services" className="mx-auto max-w-6xl px-4 py-14 md:py-20">
       <SectionHeading
         eyebrow="Services"
         title="Service menu and starter pricing"
-        description="See the most requested jobs first, then scan the full menu. Call for exact quotes, availability, and urgent roadside support."
+        description="Scan the full service menu and starter pricing in one place. Call for exact quotes, availability, and urgent roadside support."
       />
 
       <div className="mt-8 space-y-6 md:mt-10">
@@ -26,18 +20,6 @@ export function ServicesSection({ serviceGroups, whyChooseUs }) {
                   Review the most common on-site services in one place. These are labor-only starter prices designed for quick scanning on mobile.
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div className="border-b border-mechanicSteel bg-[#efe5d8] px-4 py-5 sm:px-6 lg:px-8">
-            <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-mechanicCopper">Most requested</p>
-            <div className="mt-4 grid gap-4 md:grid-cols-3">
-              {featuredServices.map((service) => (
-                <div key={service.label} className="rounded-[1.5rem] border border-mechanicSteel bg-mechanicPanel p-5">
-                  <p className="text-base font-black text-mechanicBlack">{service.label}</p>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">{service.detail}</p>
-                </div>
-              ))}
             </div>
           </div>
 
