@@ -1,29 +1,68 @@
 {
   "services": {
     "basic": [
-      { "name": "Oil Change", "price": "$90" },
-      { "name": "Battery Check", "price": "$45" },
-      { "name": "Fluid Top-Up", "price": "$35" }
+      {
+        "name": "Oil Change",
+        "price": "$90"
+      },
+      {
+        "name": "Battery Check",
+        "price": "$45"
+      },
+      {
+        "name": "Fluid Top-Up",
+        "price": "$35"
+      }
     ],
     "brakes": [
-      { "name": "Brake Pad Replacement", "price": "$140" },
-      { "name": "Brake Inspection", "price": "$60" }
+      {
+        "name": "Brake Pad Replacement",
+        "price": "$140"
+      },
+      {
+        "name": "Brake Inspection",
+        "price": "$60"
+      }
     ],
     "suspension": [
-      { "name": "Ball Joint Inspection", "price": "$75" },
-      { "name": "Steering Diagnosis", "price": "$95" }
+      {
+        "name": "Ball Joint Inspection",
+        "price": "$75"
+      },
+      {
+        "name": "Steering Diagnosis",
+        "price": "$95"
+      }
     ],
     "cooling": [
-      { "name": "Coolant Flush", "price": "$120" },
-      { "name": "Heater Core Check", "price": "$95" }
+      {
+        "name": "Coolant Flush",
+        "price": "$120"
+      },
+      {
+        "name": "Heater Core Check",
+        "price": "$95"
+      }
     ],
     "diagnostics": [
-      { "name": "Engine Diagnostic Scan", "price": "$85" },
-      { "name": "Electrical Fault Check", "price": "$110" }
+      {
+        "name": "Engine Diagnostic Scan",
+        "price": "$85"
+      },
+      {
+        "name": "Electrical Fault Check",
+        "price": "$110"
+      }
     ],
     "emergency": [
-      { "name": "Flat Tire Assistance", "price": "$80" },
-      { "name": "Roadside No-Start Call", "price": "$120" }
+      {
+        "name": "Flat Tire Assistance",
+        "price": "$80"
+      },
+      {
+        "name": "Roadside No-Start Call",
+        "price": "$120"
+      }
     ]
   },
   "about": "Driveway Mechanics NL is a local mobile mechanic service focused on quick, honest repairs at your location. We help drivers in St. John's and nearby communities get back on the road with less stress.",

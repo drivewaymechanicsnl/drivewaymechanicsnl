@@ -61,7 +61,9 @@ VITE_FORM_ENDPOINT=https://formspree.io/f/your-form-id
 
 ## Optional Backend
 
-The `server` folder contains a small Express API for storing inquiries and site data in JSON. The frontend does not currently depend on it, so the easiest deployment path remains static hosting for `client`.
+The `server` folder contains a small Express API for storing site data in JSON. Inquiry submissions are now written to a local-only file at `server/data/inquiries.local.json`, which is ignored by git so personal contact details are not committed.
+
+The frontend does not currently depend on the backend, so the easiest deployment path remains static hosting for `client`.
 
 ## Hosting Recommendation
 

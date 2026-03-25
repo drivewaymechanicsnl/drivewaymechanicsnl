@@ -6,6 +6,7 @@ const path = require('path')
 const app = express()
 const PORT = process.env.PORT || 4000
 const DATA_FILE = path.join(__dirname, '..', 'data', 'data.json')
+const INQUIRIES_FILE = path.join(__dirname, '..', 'data', 'inquiries.local.json')
 const ADMIN_USERNAME = 'admin'
 const ADMIN_PASSWORD = 'admin123'
 
@@ -14,13 +15,49 @@ app.use(express.json())
 
 const requiredServiceKeys = ['basic', 'brakes', 'suspension', 'cooling', 'diagnostics', 'emergency']
 
+async function readJsonFile(filePath, fallbackValue) {
+  try {
+    const fileContent = await fs.readFile(filePath, 'utf8')
+    return JSON.parse(fileContent)
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return fallbackValue
+    }
+
+    throw error
+  }
+}
+
+async function writeJsonFile(filePath, data) {
+  await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8')
+}
+
 async function readData() {
-  const fileContent = await fs.readFile(DATA_FILE, 'utf8')
-  return JSON.parse(fileContent)
+  const data = await readJsonFile(DATA_FILE, null)
+
+  if (!data) {
+    throw new Error('Site data file is missing.')
+  }
+
+  return {
+    ...data,
+    inquiries: Array.isArray(data.inquiries) ? data.inquiries : [],
+  }
 }
 
 async function writeData(data) {
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf8')
+  await writeJsonFile(DATA_FILE, {
+    ...data,
+    inquiries: [],
+  })
+}
+
+async function readInquiries() {
+  return readJsonFile(INQUIRIES_FILE, [])
+}
+
+async function writeInquiries(inquiries) {
+  await writeJsonFile(INQUIRIES_FILE, inquiries)
 }
 
 function isAdminValid(username, password) {
@@ -31,7 +68,7 @@ function validateSiteDataShape(data) {
   if (!data || typeof data !== 'object') return false
   if (!data.services || typeof data.services !== 'object') return false
   if (!data.contact || typeof data.contact !== 'object') return false
-  if (!Array.isArray(data.inquiries) || !Array.isArray(data.images)) return false
+  if (!Array.isArray(data.images)) return false
   if (typeof data.about !== 'string') return false
   if (typeof data.contact.phone !== 'string' || typeof data.contact.hours !== 'string') return false
 
@@ -41,7 +78,10 @@ function validateSiteDataShape(data) {
 app.get('/api/data', async (_, response) => {
   try {
     const data = await readData()
-    response.json(data)
+    response.json({
+      ...data,
+      inquiries: [],
+    })
   } catch (error) {
     console.error('Failed to load data.json:', error)
     response.status(500).json({ error: 'Unable to load data.' })
@@ -56,7 +96,7 @@ app.post('/api/inquiry', async (request, response) => {
       return response.status(400).json({ error: 'All fields are required.' })
     }
 
-    const data = await readData()
+    const inquiries = await readInquiries()
     const newInquiry = {
       id: `inq_${Date.now()}`,
       name: String(name).trim(),
@@ -67,8 +107,8 @@ app.post('/api/inquiry', async (request, response) => {
       timestamp: new Date().toISOString(),
     }
 
-    data.inquiries.push(newInquiry)
-    await writeData(data)
+    inquiries.push(newInquiry)
+    await writeInquiries(inquiries)
 
     console.log('NEW INQUIRY:')
     console.log(`Name: ${newInquiry.name}`)
@@ -106,8 +146,13 @@ app.put('/api/admin/update', async (request, response) => {
       return response.status(400).json({ error: 'Invalid data format.' })
     }
 
-    await writeData(data)
-    response.json({ success: true, data })
+    const nextData = {
+      ...data,
+      inquiries: [],
+    }
+
+    await writeData(nextData)
+    response.json({ success: true, data: nextData })
   } catch (error) {
     console.error('Failed to update site data:', error)
     response.status(500).json({ error: 'Unable to save admin updates.' })
