@@ -12,12 +12,12 @@ export function SiteHeader({
   return (
     <nav className="sticky top-0 z-40 border-b border-mechanicSteel/80 bg-mechanicPanel/95 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="flex min-h-[5.25rem] items-center justify-between gap-3 py-3 sm:min-h-[5.75rem]">
-          <a href="#home" className="flex min-w-0 flex-1 items-center gap-3 lg:flex-none" onClick={() => setIsMenuOpen(false)}>
+        <div className="flex h-24 items-center justify-between gap-4 sm:h-[6.5rem] lg:h-[7rem]">
+          <a href="#home" className="flex min-w-0 flex-1 items-center gap-3 self-stretch lg:flex-none" onClick={() => setIsMenuOpen(false)}>
             <img
               src="/kerry-logo.svg"
               alt={`${businessName} logo`}
-              className="h-14 w-auto shrink-0 object-contain sm:h-16 lg:h-[4.5rem]"
+              className="h-[90%] w-auto shrink-0 object-contain"
             />
             <div className="min-w-0 leading-tight">
               <p className="truncate text-sm font-black tracking-tight text-mechanicBlack sm:text-base">{businessName}</p>
@@ -52,12 +52,6 @@ export function SiteHeader({
             >
               Call Now
             </a>
-            <a
-              href="#contact"
-              className="hidden min-h-11 items-center justify-center rounded-full bg-mechanicOrange px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper sm:inline-flex"
-            >
-              Get Help
-            </a>
             <button
               type="button"
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-mechanicSteel bg-white text-mechanicBlack transition hover:border-mechanicCopper hover:text-mechanicCopper lg:hidden"
@@ -88,20 +82,13 @@ export function SiteHeader({
               <div className="rounded-[1.5rem] border border-mechanicSteel bg-white p-4 shadow-card">
                 <p className="text-sm font-black text-mechanicBlack">Need help now?</p>
                 <p className="mt-1 text-sm text-zinc-600">Fastest response is by phone at {displayPhoneNumber}.</p>
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="mt-4">
                   <a
                     href={`tel:${phoneHref}`}
                     className="rounded-2xl bg-mechanicOrange px-4 py-4 text-center text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Call {displayPhoneNumber}
-                  </a>
-                  <a
-                    href="#contact"
-                    className="rounded-2xl border border-mechanicSteel bg-mechanicPanel px-4 py-4 text-center text-sm font-extrabold text-mechanicBlack transition hover:border-mechanicCopper hover:text-mechanicCopper"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Request Service
                   </a>
                 </div>
               </div>

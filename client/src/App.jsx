@@ -39,7 +39,6 @@ function App() {
       { href: '#testimonials', label: 'Reviews' },
       { href: '#about', label: 'Why Us' },
       { href: '#faq', label: 'FAQ' },
-      { href: '#contact', label: 'Contact' },
     ],
     [],
   )
