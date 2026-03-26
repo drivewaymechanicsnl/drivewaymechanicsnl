@@ -5,8 +5,8 @@ export function FaqSection({ faqItems }) {
     <section id="faq" className="mx-auto max-w-6xl px-4 py-14 md:py-20">
       <SectionHeading
         eyebrow="FAQ"
-        title="Answers to the questions local drivers ask most"
-        description="Keep the decision simple: if your question is urgent, use the contact section below. If you just need the next step, send a request and we will point you in the right direction."
+        title="Common questions"
+        description="Urgent problem? Skip this and call—we’re happy to talk it through."
       />
 
       <div className="mt-8 grid gap-4 md:mt-10">
@@ -27,8 +27,8 @@ export function FaqSection({ faqItems }) {
         <div>
           <div>
             <p className="text-sm font-black uppercase tracking-[0.18em] text-mechanicBronze">Still not sure?</p>
-            <p className="mt-2 max-w-2xl text-base font-semibold text-white/80">
-              Tell us what the vehicle is doing and where it is located. We will help you figure out the next move.
+            <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-white/85">
+              Use the form below, or call if you need help sooner.
             </p>
           </div>
         </div>

@@ -6,9 +6,9 @@ export function TestimonialsSection({ testimonials }) {
   return (
     <section id="testimonials" className="mx-auto max-w-6xl px-4 py-14 md:py-20">
       <SectionHeading
-        eyebrow="Customer Trust"
-        title="Trusted by drivers across St. John&apos;s and nearby communities"
-        description="The strongest proof is simple: people remember the fast response, the convenience, and the clear communication."
+        eyebrow="Reviews"
+        title="What local drivers say"
+        description="Short notes from people we’ve helped in the area."
         align="center"
       />
 

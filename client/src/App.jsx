@@ -6,7 +6,6 @@ import {
   siteData,
   testimonials,
   trustStats,
-  whyChooseUs,
 } from './site-data'
 import { AboutSection } from './components/about-section'
 import { ContactSection } from './components/contact-section'
@@ -35,9 +34,7 @@ function App() {
   const navLinks = useMemo(
     () => [
       { href: '#services', label: 'Services' },
-      { href: '#process', label: 'How It Works' },
-      { href: '#testimonials', label: 'Reviews' },
-      { href: '#about', label: 'Why Us' },
+      { href: '#contact', label: 'Book' },
       { href: '#faq', label: 'FAQ' },
     ],
     [],
@@ -115,9 +112,9 @@ function App() {
         <SiteHeader
           navLinks={navLinks}
           phoneHref={phoneHref}
-          phoneNumber={siteData.contact.phone}
           businessName={siteData.businessName}
           brandTagline={siteData.brandTagline}
+          bookHref="#contact"
           isMenuOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}
         />
@@ -136,19 +133,27 @@ function App() {
             </div>
 
             <div className="border-t border-white/10 bg-black/10 px-4 py-5 sm:px-5 lg:px-8">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <div>
-                  <p className="text-sm font-black uppercase tracking-[0.18em] text-mechanicBronze">Local mobile service</p>
-                  <p className="mt-2 max-w-2xl text-sm font-semibold leading-6 text-white/85 sm:text-base">
-                    Serving St. John&apos;s and nearby communities within 150KM. Reach us at {siteData.contact.phone}.
-                  </p>
-                </div>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-mechanicBronze">Service area</p>
+              <p className="mt-2 text-lg font-black text-white sm:text-xl">{siteData.serviceArea}</p>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base">
+                Not sure you&apos;re in range? Call, and we&apos;ll confirm quickly. Questions? Use{' '}
+                <span className="font-semibold text-white">Call now</span> at the top.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {siteData.serviceAreaLocations.map((location) => (
+                  <span
+                    key={location}
+                    className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/90 sm:text-sm"
+                  >
+                    {location}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        <ServicesSection serviceGroups={serviceGroups} whyChooseUs={whyChooseUs} />
+        <ServicesSection serviceGroups={serviceGroups} />
         <ProcessSection processSteps={processSteps} />
         <TestimonialsSection testimonials={testimonials} />
         <AboutSection siteData={siteData} />

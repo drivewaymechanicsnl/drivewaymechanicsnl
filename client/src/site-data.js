@@ -1,158 +1,138 @@
 export const siteData = {
   businessName: 'Driveway Mechanics NL',
-  subtitle: '24/7 available for mobile auto repair at your home, work, or roadside.',
-  brandTagline: 'No shop. No waiting. On-site auto repair.',
-  emergencyBadge: '24/7 roadside and urgent mobile repair support',
-  heroEyebrow: "Serving St. John's, Mount Pearl, Paradise, and nearby areas",
-  heroTitle: 'Car trouble? We come to you, 24/7.',
-  heroCardTitle: 'Reach out for the fastest response.',
-  heroCardText:
-    'Tell us the issue, your location, and how urgent it is. We will confirm availability, pricing expectations, and the next step before the visit.',
+  subtitle:
+    'We fix your car where you are, whether that is home, work, or the roadside. Call us any time, day or night.',
+  brandTagline: 'Mobile repair. No shop visit.',
+  heroEyebrow: "St. John's · Mount Pearl · Paradise · nearby",
+  heroTitle: 'Car trouble? We come to you.',
+  heroCardTitle: 'What to have ready',
+  heroCardText: 'Your location, what the car is doing, and a phone number we can reach you on.',
   heroDescription:
-    'Most jobs are completed on-site. We handle diagnostics, brakes, no-start issues, maintenance, and roadside support at your home, work, or roadside location.',
-  serviceArea: "Serving St. John's and nearby communities within 150KM",
+    'Diagnostics, brakes, oil changes, starting trouble, and roadside help. We do the work at your location whenever it can safely be done there.',
+  serviceArea: "St. John's and area (about 150 km)",
   contact: {
     phone: '7096319056',
     hours: '24/7',
     email: 'drivewaymechanicsnl@gmail.com',
   },
-  trustHighlights: [
-    '24/7 support for urgent service',
-    'Clear pricing before work starts',
-    'Diagnostics, brakes, no-starts, and roadside help',
+  trustHighlights: ['24/7 phone support', 'Price explained before work', 'Home, work, or roadside'],
+  aboutLead:
+    'We’re local mobile mechanics, so you get honest help without towing to a shop. Experienced techs come to you with clear advice and fair pricing.',
+  aboutBullets: [
+    'We meet you at home, at work, or a safe spot by the road',
+    'You hear the price and the plan before we start the job',
+    'Clear, honest advice in everyday words, no pressure to add work',
+    'Stranded, brake trouble, or stuck on the roadside? We move urgent calls to the front of the line when we can',
+    'Proud to serve St. John’s and surrounding communities, up to about 150 km',
   ],
-  about:
-    "Driveway Mechanics NL was built around a simple idea: people in Newfoundland should be able to get honest, skilled auto repair help without the stress of towing their vehicle to a shop. Our team includes experienced mechanics with years in the trade, including certified professionals who have spent decades helping drivers diagnose problems, make safe repairs, and get back on the road with confidence. We bring that same practical, community-first service to your driveway, workplace, or roadside location with clear communication, straightforward recommendations, and help you can trust.",
-  footerTagline: "Mobile auto repair across St. John's and surrounding areas.",
+  footerTagline: 'Mobile auto repair in St. John’s and surrounding area.',
   serviceAreaLocations: [
     "St. John's",
     'Mount Pearl',
     'Paradise',
     'CBS',
     'Portugal Cove',
-    'Nearby highways and surrounding towns',
+    'Nearby highways',
   ],
 }
 
 export const trustStats = [
-  { value: 'St. John’s', label: 'Also serving Mount Pearl, Paradise, and nearby communities' },
-  { value: '24/7', label: 'Phone support and urgent mobile service day or night' },
-  { value: 'Upfront', label: 'Clear pricing before work begins' },
-  { value: 'On-Site', label: 'Home, work, or roadside support across a 150KM area' },
+  { value: '24/7', label: 'Call any time—urgent jobs prioritized when we can' },
+  { value: 'On-site', label: 'We come to your home, workplace, or roadside' },
+  { value: 'Upfront', label: 'We explain cost before work begins' },
+  { value: '~150 km', label: 'Service area around St. John’s—ask if you’re unsure' },
 ]
 
 export const serviceGroups = [
   {
     id: 'maintenance',
-    label: 'Maintenance & Tune-Ups',
-    description: 'Easy maintenance done on-site so you can skip the shop visit.',
-    accent: 'Routine service',
+    label: 'Maintenance & tune-ups',
+    description: 'Routine work at your location.',
+    accent: 'Popular',
     items: [
-      { name: 'Oil Change', price: '$90' },
-      { name: 'Battery Check', price: '$45' },
-      { name: 'Fluid Top-Up', price: '$35' },
+      { name: 'Oil change', price: '$90' },
+      { name: 'Battery check', price: '$45' },
+      { name: 'Fluid top-up', price: '$35' },
     ],
   },
   {
     id: 'brakes',
-    label: 'Brake Services',
-    description: 'Brake help with clear recommendations before anything moves ahead.',
-    accent: 'High demand',
+    label: 'Brakes',
+    description: 'Inspection and pad work with clear options before we start.',
+    accent: 'Common',
     items: [
-      { name: 'Brake Pad Replacement', price: '$140' },
-      { name: 'Brake Inspection', price: '$60' },
+      { name: 'Brake pad replacement', price: '$140' },
+      { name: 'Brake inspection', price: '$60' },
     ],
   },
   {
     id: 'suspension',
-    label: 'Suspension & Steering',
-    description: 'On-site diagnosis for front-end handling and steering concerns.',
+    label: 'Suspension & steering',
+    description: 'Front-end and steering checks on-site.',
     items: [
-      { name: 'Ball Joint Inspection', price: '$75' },
-      { name: 'Steering Diagnosis', price: '$95' },
+      { name: 'Ball joint inspection', price: '$75' },
+      { name: 'Steering diagnosis', price: '$95' },
     ],
   },
   {
     id: 'cooling',
-    label: 'Cooling & Heating',
-    description: 'Cooling system help for overheating issues and maintenance needs.',
+    label: 'Cooling & heating',
+    description: 'Cooling system checks and related work.',
     items: [
-      { name: 'Coolant Flush', price: '$120' },
-      { name: 'Heater Core Check', price: '$95' },
+      { name: 'Coolant flush', price: '$120' },
+      { name: 'Heater core check', price: '$95' },
     ],
   },
   {
     id: 'diagnostics',
     label: 'Diagnostics',
-    description: 'Quick testing to find the cause and explain the next step clearly.',
-    accent: 'Most requested',
+    description: 'Find the problem and explain the next step in plain language.',
+    accent: 'Often requested',
     items: [
-      { name: 'Engine Diagnostic Scan', price: '$85' },
-      { name: 'Electrical Fault Check', price: '$110' },
+      { name: 'Engine diagnostic scan', price: '$85' },
+      { name: 'Electrical fault check', price: '$110' },
     ],
   },
   {
     id: 'emergency',
-    label: 'Emergency Roadside Help',
-    description: 'Priority support for urgent issues that leave you stranded or unsafe to drive.',
-    accent: 'Fast response',
+    label: 'Roadside help',
+    description: 'When you’re stuck or it’s unsafe to drive—call first.',
+    accent: 'Urgent',
     items: [
-      { name: 'Flat Tire Assistance', price: '$80' },
-      { name: 'Roadside No-Start Call', price: '$120' },
+      { name: 'Flat tire help', price: '$80' },
+      { name: 'No-start / roadside visit', price: '$120' },
     ],
-  },
-]
-
-export const whyChooseUs = [
-  {
-    title: 'We Come To You',
-    text: 'Home driveway, office parking lot, or roadside shoulder. You stay put and we come to your vehicle.',
-  },
-  {
-    title: 'Clear Communication',
-    text: 'You get practical updates, honest recommendations, and labor pricing before work begins.',
-  },
-  {
-    title: 'Built For Urgent Problems',
-    text: 'No-start issues, warning lights, brake concerns, and roadside trouble get fast attention around the clock.',
-  },
-  {
-    title: 'Local And Convenient',
-    text: "Serving drivers across St. John's and nearby communities with dependable mobile repair and less downtime.",
   },
 ]
 
 export const processSteps = [
   {
-    title: 'Call Or Request Service',
-    text: 'Tell us the issue, your location, and the best number to reach you.',
+    title: 'Call or book',
+    text: 'Tell us what’s wrong and where you are.',
   },
   {
-    title: 'Get A Clear Plan',
-    text: 'We confirm availability, explain the next step, and set pricing expectations before the visit.',
+    title: 'Get a plan',
+    text: 'We confirm timing, explain the work, and give a price expectation.',
   },
   {
-    title: 'We Repair On-Site',
-    text: 'We come to your location to inspect, diagnose, and complete the job when it can be handled on-site.',
+    title: 'We repair on-site',
+    text: 'We come to you and complete the job when it can be done there.',
   },
 ]
 
 export const testimonials = [
   {
-    quote:
-      'Fast response, clear pricing, and the repair was done right in my driveway. Exactly the kind of service I was hoping for.',
+    quote: 'Fast response, clear price, and the work was done in my driveway.',
     author: 'Sarah M.',
     context: "St. John's",
   },
   {
-    quote:
-      'Our car would not start before work and they saved us from having to tow it anywhere. Super convenient and professional.',
+    quote: 'Car wouldn’t start before work—they helped without a tow. Very professional.',
     author: 'Daniel R.',
     context: 'Mount Pearl',
   },
   {
-    quote:
-      'They explained the issue clearly and did not push extra work. It felt honest, efficient, and easy from start to finish.',
+    quote: 'They explained everything simply and didn’t push extra repairs.',
     author: 'Amanda T.',
     context: 'Paradise',
   },
@@ -162,31 +142,31 @@ export const faqItems = [
   {
     question: 'What vehicles do you work on?',
     answer:
-      'We help with many common issues for cars, SUVs, and light trucks. If you are unsure, contact us with your vehicle details and the problem you are seeing.',
+      'Most cars, SUVs, and light trucks for common problems. Not sure? Call with your make, model, and symptom.',
   },
   {
-    question: 'Do you offer same-day service?',
+    question: 'Can I get same-day help?',
     answer:
-      'Yes. We operate 24/7 for calls and urgent service requests. Arrival time can still vary based on location, weather, and the current service queue.',
+      'Often yes. We answer 24/7. Wait time depends on where you are, weather, and how busy we are.',
   },
   {
     question: 'How does pricing work?',
     answer:
-      'The listed prices are labor-only starting points. Final pricing depends on the vehicle, the exact problem, and whether parts are needed.',
+      'Listed prices are labor starting points. Final cost depends on your vehicle, the exact problem, and parts if needed.',
   },
   {
-    question: 'What if my vehicle will not start?',
+    question: 'What if my car won’t start?',
     answer:
-      'That is one of the most common reasons people call us. We can diagnose no-start situations, battery issues, and several roadside problems on-site.',
+      'Call us—that’s a common request. We can often diagnose battery and no-start issues on-site.',
   },
   {
-    question: 'Do I need to tow my vehicle first?',
+    question: 'Do I need a tow first?',
     answer:
-      'Usually no. The goal is to save you the hassle of towing by coming directly to your location whenever the job can be handled on-site.',
+      'Usually not. We aim to fix it where you are when the repair can be done on-site.',
   },
   {
-    question: 'Where do you provide service?',
+    question: 'Where do you travel?',
     answer:
-      "We serve St. John's and nearby communities within roughly 150KM. If you are outside the main area, reach out and we can confirm availability.",
+      'St. John’s and roughly 150 km around it. Outside that? Call—we’ll say if we can help.',
   },
 ]

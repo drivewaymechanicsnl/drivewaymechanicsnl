@@ -1,31 +1,33 @@
 export function SiteHeader({
   navLinks,
   phoneHref,
-  phoneNumber,
   businessName,
   brandTagline,
+  bookHref,
   isMenuOpen,
   setIsMenuOpen,
 }) {
-  const displayPhoneNumber = formatPhoneNumber(phoneNumber)
-
   return (
-    <nav className="sticky top-0 z-40 border-b border-mechanicSteel/80 bg-mechanicPanel/95 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="flex h-24 items-center justify-between gap-4 sm:h-[6.5rem] lg:h-[7rem]">
-          <a href="#home" className="flex min-w-0 flex-1 items-center gap-3 self-stretch lg:flex-none" onClick={() => setIsMenuOpen(false)}>
+    <header className="sticky top-0 z-40 border-b border-mechanicSteel/80 bg-mechanicPanel/95 backdrop-blur">
+      <nav aria-label="Main" className="mx-auto max-w-6xl px-4">
+        <div className="flex h-[4.25rem] items-center justify-between gap-3 sm:h-20 lg:h-[5.5rem]">
+          <a
+            href="#home"
+            className="flex min-w-0 flex-1 items-center gap-2.5 self-stretch sm:gap-3 lg:flex-none"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <img
               src="/kerry-logo.svg"
               alt={`${businessName} logo`}
-              className="h-[90%] w-auto shrink-0 object-contain"
+              className="h-[72px] w-auto shrink-0 object-contain sm:h-[5.25rem]"
             />
             <div className="min-w-0 leading-tight">
               <p className="truncate text-sm font-black tracking-tight text-mechanicBlack sm:text-base">{businessName}</p>
-              <p className="hidden max-w-xs truncate text-[11px] font-medium text-zinc-600 sm:block">{brandTagline}</p>
+              <p className="hidden max-w-[14rem] truncate text-[11px] font-medium text-zinc-600 sm:block">{brandTagline}</p>
             </div>
           </a>
 
-          <div className="hidden flex-1 items-center justify-center gap-5 px-6 text-sm font-semibold text-zinc-700 lg:flex xl:gap-7">
+          <div className="hidden items-center gap-4 text-sm font-semibold text-zinc-700 lg:flex">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className="whitespace-nowrap transition hover:text-mechanicCopper">
                 {link.label}
@@ -33,31 +35,28 @@ export function SiteHeader({
             ))}
           </div>
 
-          <div className="flex items-center justify-end gap-2 sm:gap-3">
+          <div className="hidden shrink-0 items-center gap-2 sm:gap-3 lg:flex">
             <a
               href={`tel:${phoneHref}`}
-              className="hidden items-center gap-3 rounded-full border border-mechanicSteel bg-white px-4 py-2.5 text-left shadow-card md:flex"
+              className="inline-flex min-h-12 min-w-[7.5rem] items-center justify-center rounded-full bg-mechanicOrange px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mechanicOrange/10 text-xs font-black uppercase tracking-[0.14em] text-mechanicCopper">
-                Call
-              </span>
-              <span className="min-w-0">
-                <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-mechanicCopper">Fast response</span>
-                <span className="block text-sm font-black text-mechanicBlack">{displayPhoneNumber}</span>
-              </span>
+              Call now
             </a>
             <a
-              href={`tel:${phoneHref}`}
-              className="inline-flex min-h-11 items-center justify-center rounded-full border border-mechanicCopper/30 bg-white px-4 py-2.5 text-sm font-extrabold text-mechanicBlack transition hover:border-mechanicCopper hover:text-mechanicCopper md:hidden"
+              href={bookHref}
+              className="inline-flex min-h-12 min-w-[7.5rem] items-center justify-center rounded-full border-2 border-mechanicCopper/40 bg-white px-5 py-3 text-sm font-extrabold text-mechanicBlack transition hover:border-mechanicCopper"
             >
-              Call Now
+              Book now
             </a>
+          </div>
+
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-mechanicSteel bg-white text-mechanicBlack transition hover:border-mechanicCopper hover:text-mechanicCopper lg:hidden"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-mechanicSteel bg-white text-mechanicBlack transition hover:border-mechanicCopper hover:text-mechanicCopper"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-navigation"
-              aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               onClick={() => setIsMenuOpen((current) => !current)}
             >
               {isMenuOpen ? (
@@ -76,27 +75,30 @@ export function SiteHeader({
           </div>
         </div>
 
+        <div className="grid grid-cols-2 gap-2 pb-3 pt-0 lg:hidden">
+          <a
+            href={`tel:${phoneHref}`}
+            className="inline-flex min-h-[3.25rem] items-center justify-center rounded-2xl bg-mechanicOrange px-3 py-3 text-center text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
+          >
+            Call now
+          </a>
+          <a
+            href={bookHref}
+            className="inline-flex min-h-[3.25rem] items-center justify-center rounded-2xl border-2 border-mechanicCopper/35 bg-white px-3 py-3 text-center text-sm font-extrabold text-mechanicBlack transition hover:border-mechanicCopper"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Book now
+          </a>
+        </div>
+
         {isMenuOpen && (
           <div id="mobile-navigation" className="border-t border-mechanicSteel bg-mechanicPanel py-4 lg:hidden">
-            <div className="mx-auto grid max-w-6xl gap-3 pb-1">
-              <div className="rounded-[1.5rem] border border-mechanicSteel bg-white p-4 shadow-card">
-                <p className="text-sm font-black text-mechanicBlack">Need help now?</p>
-                <p className="mt-1 text-sm text-zinc-600">Fastest response is by phone at {displayPhoneNumber}.</p>
-                <div className="mt-4">
-                  <a
-                    href={`tel:${phoneHref}`}
-                    className="rounded-2xl bg-mechanicOrange px-4 py-4 text-center text-sm font-extrabold text-white shadow-glow transition hover:bg-mechanicCopper"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Call {displayPhoneNumber}
-                  </a>
-                </div>
-              </div>
+            <div className="mx-auto grid max-w-6xl gap-2 pb-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="rounded-2xl border border-mechanicSteel bg-white px-4 py-3 text-sm font-bold text-zinc-700 transition hover:border-mechanicCopper hover:text-mechanicCopper"
+                  className="rounded-2xl border border-mechanicSteel bg-white px-4 py-3.5 text-sm font-bold text-zinc-700 transition hover:border-mechanicCopper hover:text-mechanicCopper"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -105,17 +107,7 @@ export function SiteHeader({
             </div>
           </div>
         )}
-      </div>
-    </nav>
+      </nav>
+    </header>
   )
-}
-
-function formatPhoneNumber(phoneNumber) {
-  const digits = `${phoneNumber || ''}`.replace(/\D/g, '')
-
-  if (digits.length === 10) {
-    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
-  }
-
-  return phoneNumber
 }

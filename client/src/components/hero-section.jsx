@@ -16,17 +16,25 @@ export function HeroSection({ siteData }) {
           <p className="mt-4 max-w-xl text-lg font-semibold leading-7 text-white/85 sm:text-xl sm:leading-8">{siteData.subtitle}</p>
           <p className="mt-4 max-w-xl text-base leading-7 text-white/72 sm:text-lg sm:leading-8">{siteData.heroDescription}</p>
 
-          <div className="mt-7 grid gap-3 sm:grid-cols-3">
+          <p className="mt-6 text-sm font-semibold leading-relaxed text-white/70">
+            Use <span className="text-white">Call now</span> or <span className="text-white">Book now</span> at the top of the page.
+          </p>
+
+          <ul className="mt-4 text-sm font-semibold text-white/80 sm:hidden">
+            {siteData.trustHighlights.map((item) => (
+              <li key={item} className="mt-3 flex gap-2">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-mechanicOrange" aria-hidden />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-7 hidden gap-3 sm:grid sm:grid-cols-3">
             {siteData.trustHighlights.map((item) => (
               <div key={item} className="rounded-2xl border border-white/10 bg-white/8 p-4 backdrop-blur">
                 <p className="text-sm font-semibold leading-5 text-white/80 sm:leading-6">{item}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-white/70">
-            <span className="rounded-full border border-white/10 bg-black/15 px-4 py-2">Most jobs completed on-site</span>
-            <span className="rounded-full border border-white/10 bg-black/15 px-4 py-2">Serving St. John&apos;s and nearby areas</span>
           </div>
         </div>
 
@@ -41,31 +49,23 @@ export function HeroSection({ siteData }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-mechanicBlack via-mechanicBlack/45 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-8">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70 sm:text-sm sm:tracking-[0.18em]">On-site support</p>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70 sm:text-sm sm:tracking-[0.18em]">On-site repair</p>
                 <p className="mt-2 max-w-md text-xl font-black leading-tight sm:text-[2rem]">
-                  Fast, practical repairs at your home, work, or roadside location.
+                  Honest, practical help at your location.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="mx-3 -mt-10 rounded-3xl border border-mechanicSteel bg-mechanicPanel p-5 text-mechanicBlack shadow-card sm:mx-10 sm:-mt-12 sm:p-6">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-mechanicCopper sm:text-sm sm:tracking-[0.18em]">Need help now?</p>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-mechanicCopper sm:text-sm sm:tracking-[0.18em]">Before you call</p>
             <p className="mt-2 text-xl font-black sm:text-2xl">{siteData.heroCardTitle}</p>
             <p className="mt-2 text-sm leading-6 text-zinc-600">{siteData.heroCardText}</p>
-            <div className="mt-5 grid gap-3">
-              <div className="rounded-2xl border border-mechanicSteel bg-white p-4">
-                <p className="text-sm font-black text-mechanicBlack">Phone: {siteData.contact.phone}</p>
-                <p className="mt-1 text-sm leading-6 text-zinc-600">
-                  Use the contact section below for requests and urgent service questions.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-mechanicSteel bg-white p-4">
-                <p className="text-sm font-black text-mechanicBlack">Roadside and no-start calls are prioritized when possible</p>
-                <p className="mt-1 text-sm leading-6 text-zinc-600">
-                  We take calls 24/7, and arrival time depends on location, weather, and current demand.
-                </p>
-              </div>
+            <div className="mt-5 rounded-2xl border border-mechanicSteel bg-white p-4">
+              <p className="text-sm font-black text-mechanicBlack">Phone: {siteData.contact.phone}</p>
+              <p className="mt-4 text-sm leading-6 text-zinc-600">
+                Urgent or roadside? <strong className="text-mechanicBlack">Call first.</strong> Arrival time depends on distance and weather.
+              </p>
             </div>
           </div>
         </div>

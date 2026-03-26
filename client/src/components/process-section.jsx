@@ -4,9 +4,9 @@ export function ProcessSection({ processSteps }) {
   return (
     <section id="process" className="mx-auto max-w-6xl px-4 py-14 md:py-20">
       <SectionHeading
-        eyebrow="How It Works"
-        title="Simple process. Fast response."
-        description="Call, get a clear plan, and we come to you when the job can be handled on-site."
+        eyebrow="How it works"
+        title="Three easy steps"
+        description="Call or book, agree on a plan, and we come to you."
         align="center"
       />
 
@@ -24,8 +24,8 @@ export function ProcessSection({ processSteps }) {
         </div>
 
         <div className="mt-6 border-t border-white/10 pt-6">
-          <p className="max-w-2xl text-sm font-semibold leading-6 text-white/75">
-            Need roadside help or worried you will not make it to a shop? Call first for the fastest next step.
+          <p className="max-w-2xl text-sm font-semibold leading-relaxed text-white/75">
+            Stuck on the road? Call first—we’ll tell you the fastest option.
           </p>
         </div>
       </div>
