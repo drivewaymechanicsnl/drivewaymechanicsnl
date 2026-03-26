@@ -15,7 +15,7 @@ export function ContactSection({
           <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-mechanicBronze">Contact</p>
           <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl">Need help now? Call us.</h2>
           <p className="mt-4 text-base leading-8 text-white/75">
-            For same-day help, no-start issues, roadside calls, or urgent questions, the fastest move is to call first. You can also send a request below.
+            For no-start issues, roadside calls, late-night problems, or urgent questions, the fastest move is to call first. You can also send a request below.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -45,7 +45,7 @@ export function ContactSection({
               <p className="text-sm font-semibold text-white/75">Service area</p>
               <p className="mt-1 text-base font-bold">{siteData.serviceArea}</p>
               <p className="mt-4 text-sm leading-6 text-white/75">
-                Same-day service may be available depending on schedule and travel distance.
+                We answer calls 24/7. Arrival time depends on travel distance, weather, and current bookings.
               </p>
             </div>
           </div>

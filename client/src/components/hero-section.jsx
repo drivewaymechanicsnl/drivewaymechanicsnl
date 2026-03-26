@@ -63,7 +63,7 @@ export function HeroSection({ siteData }) {
               <div className="rounded-2xl border border-mechanicSteel bg-white p-4">
                 <p className="text-sm font-black text-mechanicBlack">Roadside and no-start calls are prioritized when possible</p>
                 <p className="mt-1 text-sm leading-6 text-zinc-600">
-                  Same-day appointments may be available depending on schedule and travel distance.
+                  We take calls 24/7, and arrival time depends on location, weather, and current demand.
                 </p>
               </div>
             </div>

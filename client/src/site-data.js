@@ -1,10 +1,10 @@
 export const siteData = {
   businessName: 'Driveway Mechanics NL',
-  subtitle: 'Mobile auto repair at your home, work, or roadside.',
+  subtitle: '24/7 available for mobile auto repair at your home, work, or roadside.',
   brandTagline: 'No shop. No waiting. On-site auto repair.',
-  emergencyBadge: 'Same-day and roadside help available when scheduling allows',
+  emergencyBadge: '24/7 roadside and urgent mobile repair support',
   heroEyebrow: "Serving St. John's, Mount Pearl, Paradise, and nearby areas",
-  heroTitle: 'Car trouble? We come to you.',
+  heroTitle: 'Car trouble? We come to you, 24/7.',
   heroCardTitle: 'Reach out for the fastest response.',
   heroCardText:
     'Tell us the issue, your location, and how urgent it is. We will confirm availability, pricing expectations, and the next step before the visit.',
@@ -13,11 +13,11 @@ export const siteData = {
   serviceArea: "Serving St. John's and nearby communities within 150KM",
   contact: {
     phone: '7096319056',
-    hours: 'Every day, 8am to 8pm',
+    hours: '24/7',
     email: 'drivewaymechanicsnl@gmail.com',
   },
   trustHighlights: [
-    'Fast response for urgent service',
+    '24/7 support for urgent service',
     'Clear pricing before work starts',
     'Diagnostics, brakes, no-starts, and roadside help',
   ],
@@ -36,7 +36,7 @@ export const siteData = {
 
 export const trustStats = [
   { value: 'St. John’s', label: 'Also serving Mount Pearl, Paradise, and nearby communities' },
-  { value: 'Same-Day', label: 'Service available when scheduling opens up' },
+  { value: '24/7', label: 'Phone support and urgent mobile service day or night' },
   { value: 'Upfront', label: 'Clear pricing before work begins' },
   { value: 'On-Site', label: 'Home, work, or roadside support across a 150KM area' },
 ]
@@ -114,7 +114,7 @@ export const whyChooseUs = [
   },
   {
     title: 'Built For Urgent Problems',
-    text: 'No-start issues, warning lights, brake concerns, and roadside trouble get fast attention when availability allows.',
+    text: 'No-start issues, warning lights, brake concerns, and roadside trouble get fast attention around the clock.',
   },
   {
     title: 'Local And Convenient',
@@ -167,7 +167,7 @@ export const faqItems = [
   {
     question: 'Do you offer same-day service?',
     answer:
-      'Same-day appointments are available when scheduling and travel distance allow. Emergency calls are prioritized whenever possible.',
+      'Yes. We operate 24/7 for calls and urgent service requests. Arrival time can still vary based on location, weather, and the current service queue.',
   },
   {
     question: 'How does pricing work?',
