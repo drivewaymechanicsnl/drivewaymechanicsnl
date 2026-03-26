@@ -22,17 +22,6 @@ export function FaqSection({ faqItems }) {
           </details>
         ))}
       </div>
-
-      <div className="mt-8 rounded-[2rem] border border-mechanicCopper/20 bg-[linear-gradient(135deg,_#12100f_0%,_#241812_50%,_#7c3f1d_100%)] p-5 text-white shadow-card sm:p-8">
-        <div>
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.18em] text-mechanicBronze">Still not sure?</p>
-            <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-white/85">
-              Use the form below, or call if you need help sooner.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }

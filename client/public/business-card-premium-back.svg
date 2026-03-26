@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1125" height="675" viewBox="0 0 1125 675">
+  <defs>
+    <linearGradient id="bg-back" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#1a212b" />
+    </linearGradient>
+    <linearGradient id="accent-back" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f38f1d" />
+      <stop offset="100%" stop-color="#ffc95c" />
+    </linearGradient>
+  </defs>
+
+  <!-- 3.75in x 2.25in @300 DPI (includes 0.125in bleed); trim area is 3.5in x 2in -->
+  <rect x="0" y="0" width="1125" height="675" fill="url(#bg-back)" />
+
+  <ellipse cx="980" cy="120" rx="280" ry="170" fill="#2b3747" opacity="0.22" />
+  <ellipse cx="150" cy="610" rx="220" ry="120" fill="#101821" opacity="0.32" />
+
+  <rect x="38" y="38" width="1049" height="599" rx="24" fill="none" stroke="#3a4452" stroke-width="2" opacity="0.52" />
+  <rect x="76" y="76" width="973" height="523" rx="18" fill="none" stroke="#2e3742" stroke-width="1.25" opacity="0.34" />
+
+  <!-- subtle top brand strip -->
+  <text x="86" y="136" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="2.4" fill="#f3a334">DRIVEWAY MECHANICS NL</text>
+  <line x1="86" y1="156" x2="1038" y2="156" stroke="url(#accent-back)" stroke-width="4" />
+
+  <!-- dominant contact hierarchy -->
+  <text x="86" y="238" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="2" fill="#8f9cae">CALL OR TEXT</text>
+  <text x="86" y="360" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="124" font-weight="800" fill="#ffffff">709-631-9056</text>
+  <text x="86" y="430" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="39" font-weight="600" fill="#f3a334">drivewaymechanicsnl@gmail.com</text>
+
+  <text x="1038" y="430" text-anchor="end" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="30" font-weight="500" fill="#c1ccda">Kerry</text>
+
+  <!-- service list with separators, no boxes -->
+  <line x1="86" y1="494" x2="1038" y2="494" stroke="#374250" stroke-width="2" />
+  <text x="86" y="556" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="33" font-weight="600" fill="#ffffff">Diagnostics</text>
+  <circle cx="307" cy="545" r="5" fill="#f3a334" />
+  <text x="334" y="556" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="33" font-weight="600" fill="#ffffff">Brakes &amp; Repairs</text>
+  <circle cx="699" cy="545" r="5" fill="#f3a334" />
+  <text x="726" y="556" font-family="Inter, Poppins, SF Pro Display, Arial, sans-serif" font-size="33" font-weight="600" fill="#ffffff">No-Start Help</text>
+</svg>

@@ -6,6 +6,7 @@
 !.vscode/extensions.json
 
 node_modules
+.venv
 dist
 dist-ssr
 coverage
