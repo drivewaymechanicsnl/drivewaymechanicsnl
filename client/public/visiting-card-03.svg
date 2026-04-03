@@ -37,12 +37,13 @@
 
   <text x="442" y="352" fill="#5c5c5c" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0.12em">EMAIL</text>
   <text x="442" y="386" fill="#1a1a1a" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="600">drivewaymechanicsnl@gmail.com</text>
+  <text x="442" y="426" fill="#1a1a1a" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="600">website 🌐 : https://drivewaymechanicsnl.com</text>
 
-  <text x="442" y="448" fill="#5c5c5c" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0.12em">SERVICE AREA</text>
-  <text x="442" y="484" fill="#2d2d2d" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="500">St. John&apos;s &amp; surrounding area · Within ~150 km</text>
+  <text x="442" y="458" fill="#5c5c5c" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0.12em">SERVICE AREA</text>
+  <text x="442" y="494" fill="#2d2d2d" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="500">St. John&apos;s &amp; surrounding area · Within ~150 km</text>
 
-  <text x="442" y="544" fill="#5c5c5c" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0.12em">SERVICES</text>
-  <text x="442" y="576" fill="#404040" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="500">
+  <text x="442" y="554" fill="#5c5c5c" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0.12em">SERVICES</text>
+  <text x="442" y="586" fill="#404040" font-family="system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="500">
     <tspan x="442" dy="0">Diagnostics · Brakes · Maintenance · Fluids</tspan>
     <tspan x="442" dy="30">Starting &amp; charging · Roadside assistance</tspan>
   </text>
